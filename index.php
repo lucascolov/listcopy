@@ -56,7 +56,7 @@ function getListsByUser($username, &$connection)
 {
 	$result = $connection->get("lists/ownerships", array('screen_name' => $username, 'count' => 1000));
 	$lists = array();
-	foreach($result->lists as $list)
+	foreach ($result->lists as $list)
 	{
 		$lists[] = $list->slug;
 	}
